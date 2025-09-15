@@ -109,31 +109,72 @@
                                 <div class="tech-category">
                                     <h4>Languages</h4>
                                     <div class="tech-icons">
-                                        <div class="tech-icon"><i class="devicon-python-plain"></i></div>
-                                        <div class="tech-icon"><i class="devicon-javascript-plain"></i></div>
-                                        <div class="tech-icon"><i class="devicon-typescript-plain"></i></div>
-                                        <div class="tech-icon"><i class="devicon-c-plain"></i></div>
-                                        <div class="tech-icon"><i class="devicon-ruby-plain"></i></div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Python">
+                                            <i class="devicon-python-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="C">
+                                            <i class="devicon-c-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="C#">
+                                            <i class="devicon-csharp-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="TypeScript">
+                                            <i class="devicon-typescript-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="JavaScript">
+                                            <i class="devicon-javascript-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Ruby">
+                                            <i class="devicon-ruby-plain"></i>
+                                        </div>
                                     </div>
                                 </div>
+
                                 <div class="tech-category">
-                                    <h4>Frameworks</h4>
+                                    <h4>Frameworks & Platforms</h4>
                                     <div class="tech-icons">
-                                        <div class="tech-icon"><i class="devicon-react-plain"></i></div>
-                                        <div class="tech-icon"><i class="devicon-fastapi-plain"></i></div>
-                                        <div class="tech-icon"><i class="devicon-flask-original"></i></div>
-                                        <div class="tech-icon"><i class="devicon-django-plain"></i></div>
-                                        <div class="tech-icon"><i class="devicon-rails-plain"></i></div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="React">
+                                            <i class="devicon-react-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="FastAPI">
+                                            <i class="devicon-fastapi-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Flask">
+                                            <i class="devicon-flask-original"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title=".NET">
+                                            <i class="devicon-dotnetcore-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Django">
+                                            <i class="devicon-django-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Ruby on Rails">
+                                            <i class="devicon-rails-plain"></i>
+                                        </div>
                                     </div>
                                 </div>
+
                                 <div class="tech-category">
-                                    <h4>Tools</h4>
+                                    <h4>Tools & Cloud</h4>
                                     <div class="tech-icons">
-                                        <div class="tech-icon"><i class="devicon-docker-plain"></i></div>
-                                        <div class="tech-icon"><i class="devicon-postgresql-plain"></i></div>
-                                        <div class="tech-icon"><i class="devicon-sqlite-plain"></i></div>
-                                        <div class="tech-icon"><i class="devicon-tailwindcss-plain"></i></div>
-                                        <div class="tech-icon"><i class="devicon-bootstrap-plain"></i></div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Docker">
+                                            <i class="devicon-docker-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="PostgreSQL">
+                                            <i class="devicon-postgresql-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="SQLite">
+                                            <i class="devicon-sqlite-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Azure">
+                                            <i class="devicon-azure-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Tailwind CSS">
+                                            <i class="devicon-tailwindcss-plain"></i>
+                                        </div>
+                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Bootstrap">
+                                            <i class="devicon-bootstrap-plain"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -177,6 +218,33 @@
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">FastAPI</span>
                             <span class="tech-tag">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-animate="right">
+                    <div class="project-image-wrapper">
+                        <img src="{{ url_for('static', filename='images/trello.png') }}" 
+                             class="project-image" alt="Trello Clone">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="https://github.com/jakmate/TrelloClone" 
+                                   class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Trello Clone</h3>
+                        <p class="project-description">
+                            Full-stack collaborative task manager with real-time updates, drag-and-drop boards, and team access control
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">SQL Server</span>
                         </div>
                     </div>
                 </div>
@@ -283,31 +351,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card" data-animate="right">
-                    <div class="project-image-wrapper">
-                        <img src="{{ url_for('static', filename='images/F1Vis.png') }}" 
-                             class="project-image" alt="F1 Data Visualization">
-                        <div class="project-overlay">
-                            <div class="project-actions">
-                                <a href="https://github.com/jakmate/F1_2024_Review" 
-                                   class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                                    View Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">F1 Data Visualization</h3>
-                        <p class="project-description">
-                            Visualization of Formula 1 2025 season data
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Jupyter Notebook</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -318,9 +361,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact-content" data-animate="fade">
-                        <h2 class="section-title">Let's Work Together</h2>
+                        <h2 class="section-title">Contact</h2>
                         <p class="section-subtitle">
-                            Have a project in mind? I'd love to hear about it.
+                            Want to work together? Feel free to contact me.
                         </p>
                         
                         <form id="form" class="contact-form" method="post" action="/sendMessage" onsubmit="submitForm(event)">
