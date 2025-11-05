@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 minHeight: 200.00,
                 minWidth: 200.00,
                 scale: 1.00,
-                scaleMobile: 1.00,
+                scaleMobile: 0.30,
                 color: 0x00d4ff,
                 backgroundColor: 0x0a0a0a,
                 points: 8.00,

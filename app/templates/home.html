@@ -50,7 +50,7 @@
         <div class="hero-background"></div>
         <div class="hero-content">
             <div class="container">
-                <div class="row align-items-center min-vh-100">
+                <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="hero-text">
                             <p class="hero-greeting">Hello, I'm</p>
@@ -82,14 +82,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-content" data-animate="left">
-                        <h2 class="section-title">About Me</h2>
+                        <h2 class="section-title mb-4">About Me</h2>
                         <p class="about-text">
                             Passionate about solving complex problems. Code here and there. The rest can be seen on the right and below.
                         </p>
                         <p class="about-text">
                             When I'm not programming, you'll find me following F1 races or football,
-                            playing guitar and piano, or diving into a good book. I believe the 
-                            best solutions come from diverse perspectives and continuous learning.
+                            playing guitar and piano, or diving into a good book. I believe in continuous learning.
                         </p>
                     </div>
                 </div>
@@ -118,9 +117,6 @@
                                         </div>
                                         <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="TypeScript">
                                             <i class="devicon-typescript-plain"></i>
-                                        </div>
-                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Ruby">
-                                            <i class="devicon-ruby-plain"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -157,9 +153,6 @@
                                         </div>
                                         <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Django">
                                             <i class="devicon-django-plain"></i>
-                                        </div>
-                                        <div class="tech-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Ruby on Rails">
-                                            <i class="devicon-rails-plain"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -199,8 +192,8 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-header" data-animate="fade">
+        <div class="d-flex flex-column align-items-center gap-5">
+            <div data-animate="fade">
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">A collection of my recent work</p>
             </div>
@@ -286,34 +279,6 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-animate="left">
-                    <div class="project-image-wrapper">
-                        <img src="{{ url_for('static', filename='images/expenseTracker.png') }}" 
-                             class="project-image" alt="Expense Tracker">
-                        <div class="project-overlay">
-                            <div class="project-actions">
-                                <a href="https://github.com/jakmate/ExpenseTracker" 
-                                   class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                                    View Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Expense Tracker</h3>
-                        <p class="project-description">
-                            Full-stack application for personal finance management with intuitive UI
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Ruby</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Ruby on Rails</span>
-                            <span class="tech-tag">Tailwind</span>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="project-card" data-animate="right">
                     <div class="project-image-wrapper">
                         <img src="{{ url_for('static', filename='images/algorithmVisualizer.png') }}" 
@@ -338,6 +303,9 @@
                     </div>
                 </div>
             </div>
+            <a href="https://github.com/jakmate" target="_blank" rel="noopener noreferrer">
+                <button class="btn btn-primary">View Others</button>
+            </a>
         </div>
     </section>
 
@@ -371,7 +339,9 @@
                                 <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                             </div>
                             
-                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
                             
                             <div id="response" class="response-message"></div>
                         </form>
@@ -387,16 +357,16 @@
             <div class="footer-content">
                 <div class="footer-links">
                     <a href="https://www.linkedin.com/in/jakub-orzolek/" target="_blank" rel="noopener noreferrer">
-                        <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn">
+                        <i class="devicon-linkedin-plain"></i>
                     </a>
                     <a href="https://github.com/jakmate" target="_blank" rel="noopener noreferrer">
-                        <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub">
+                        <i class="devicon-github-original"></i>
                     </a>
                 </div>
                 <div class="footer-text">
                     <p>&copy; 2025 Jakub Orzolek. All rights reserved.</p>
                 </div>
-                <div class="back-to-top">
+                <div class="position-relative">
                     <a href="#home" class="btt-link">
                         <img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Back to top">
                     </a>

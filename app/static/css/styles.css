@@ -166,14 +166,6 @@ body {
     line-height: 1.2;
 }
 
-.hero-description {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-    max-width: 600px;
-    line-height: 1.7;
-}
-
 .hero-buttons {
     display: flex;
     gap: 1rem;
@@ -226,7 +218,6 @@ body {
 .btn {
     border: none;
     padding: 0.75rem 2rem;
-    font-size: 1rem;
     font-weight: 600;
     border-radius: 12px;
     text-decoration: none;
@@ -236,7 +227,6 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .btn-primary {
@@ -274,10 +264,6 @@ body {
     color: var(--text-primary);
 }
 
-.btn-block {
-    width: 100%;
-}
-
 /* Sections */
 section {
     padding: 5rem 0;
@@ -286,7 +272,6 @@ section {
 .section-title {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
-    margin-bottom: 1rem;
     text-align: center;
     background: var(--gradient-primary);
     -webkit-text-fill-color: transparent;
@@ -301,10 +286,6 @@ section {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.section-header {
-    margin-bottom: 4rem;
 }
 
 /* About Section */
@@ -403,7 +384,6 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
 }
 
 .project-card {
@@ -608,24 +588,26 @@ textarea.form-control {
 }
 
 .footer-links a:hover {
-    background: var(--gradient-primary);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgb(0 212 255 / 30%);
+    transform: translateY(-5px);
+    background: var(--gradient-secondary);
+    border-color: var(--accent-primary);
+    box-shadow: 0 10px 30px rgb(0 212 255 / 30%);
 }
 
-.footer-links img {
-    width: 20px;
-    height: 20px;
-    filter: brightness(0) invert(1);
+.footer i {
+    font-size: 1rem;
+    color: var(--accent-primary);
+    transition: all 0.3s ease;
+}
+
+.footer a:hover i {
+    color: var(--text-primary);
+    transform: scale(1.2);
 }
 
 .footer-text {
     color: var(--text-secondary);
     font-size: 0.9rem;
-}
-
-.back-to-top {
-    position: relative;
 }
 
 .btt-link {
@@ -650,30 +632,6 @@ textarea.form-control {
     height: 20px;
     filter: brightness(0) invert(1);
     transform: rotate(-90deg);
-}
-
-/* Modal */
-.modal-content {
-    background: var(--secondary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 15px;
-    backdrop-filter: blur(20px);
-}
-
-.modal-header {
-    border-bottom: 1px solid var(--border-color);
-}
-
-.modal-title {
-    color: var(--text-primary);
-}
-
-.modal-body {
-    color: var(--text-secondary);
-}
-
-.btn-close {
-    filter: brightness(0) invert(1);
 }
 
 /* Animations */
@@ -701,6 +659,32 @@ textarea.form-control {
 }
 
 /* Responsive Design */
+@media (width <= 1200px) {
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .tech-stack {
+        text-align: center;
+    }
+        
+    .tech-icons {
+        justify-content: center;
+    }
+
+    .projects-grid {
+        padding: 2.0rem;
+    }
+
+    .bottom-tech {
+        justify-content: center;
+    }
+}
+
 @media (width <= 768px) {
     .hero-buttons {
         flex-direction: column;
@@ -711,26 +695,15 @@ textarea.form-control {
         width: 100%;
         margin-bottom: 0.5rem;
     }
-
-    .tech-stack {
-        text-align: center;
-    }
-
-    .bottom-tech {
-        justify-content: center;
-    }
     
     .tech-grid {
         grid-template-columns: 1fr;
     }
     
-    .tech-icons {
-        justify-content: center;
-    }
-    
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        padding: 1.5rem;
     }
     
     .footer-content {
@@ -759,9 +732,9 @@ textarea.form-control {
     .hero-title {
         font-size: 1.5rem;
     }
-    
-    .hero-description {
-        font-size: 1rem;
+
+    .projects-grid {
+        padding: 1rem;
     }
     
     .contact-form {
