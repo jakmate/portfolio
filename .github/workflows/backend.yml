@@ -11,17 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
-      
+          python-version: "3.12"
+
       - name: Install dependencies
-        run: pip install -r requirements.txt
-      
+        run: pip install -r requirements.txt flake8 black
+
       - name: Run linting
         run: |
-          # Lint the Python code
-          pip install flake8
+          black --check .
+
+      - name: Run linting
+        run: |
           flake8 .

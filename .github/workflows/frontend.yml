@@ -11,25 +11,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      
-      - name: Install linters
+          node-version: "20"
+
+      - name: Install linters and prettier
         run: |
-          npm install -g htmlhint stylelint eslint stylelint-config-standard
-      
+          npm install -g htmlhint stylelint eslint stylelint-config-standard prettier
+
       - name: Lint HTML files
         run: htmlhint app/templates/*.html
-      
+
       - name: Lint CSS files
-        run: |
-          echo '{"extends":"stylelint-config-standard"}' > .stylelintrc.json
-          stylelint "app/static/css/**/*.css"
-      
+        run: stylelint "app/static/css/**/*.css"
+
       - name: Lint JavaScript files
         run: |
-          echo 'module.exports = [{ languageOptions: { ecmaVersion: "latest", sourceType: "module", globals: { window: "readonly", document: "readonly", console: "readonly" } }, rules: {} }];' > eslint.config.js
           eslint "app/static/js/**/*.js"
+
+      - name: Check formatting with Prettier (HTML, CSS, JS)
+        run: |
+          prettier --check .

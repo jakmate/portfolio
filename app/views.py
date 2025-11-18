@@ -19,15 +19,18 @@ def sendMessage():
         name = form.name.data
         message = form.message.data
         try:
-            msg = Message(subject=f"Message from {name} {email}",
-                          body=message, sender=app.config['MAIL_USERNAME'],
-                          recipients=[app.config['MAIL_USERNAME']])
+            msg = Message(
+                subject=f"Message from {name} {email}",
+                body=message,
+                sender=app.config["MAIL_USERNAME"],
+                recipients=[app.config["MAIL_USERNAME"]],
+            )
             thr = threading.Thread(target=send_async_email, args=[app, msg])
             thr.start()
-            return jsonify({'message': 'Sent'}), 200
+            return jsonify({"message": "Sent"}), 200
         except Exception as e:
-            return jsonify({'message': str(e)}), 500
-    return jsonify({'message': 'Failed to send'}), 400
+            return jsonify({"message": str(e)}), 500
+    return jsonify({"message": "Failed to send"}), 400
 
 
 def send_async_email(app, msg):
