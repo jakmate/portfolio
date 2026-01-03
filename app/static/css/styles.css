@@ -375,8 +375,12 @@ section {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  justify-items: stretch;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .project-card {
@@ -679,6 +683,14 @@ textarea.form-control {
 }
 
 /* Responsive Design */
+@media (min-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    max-width: 1200px;
+    padding: 0;
+  }
+}
+
 @media (width <=1200px) {
   .hero-section {
     text-align: center;
@@ -697,7 +709,8 @@ textarea.form-control {
   }
 
   .projects-grid {
-    padding: 2rem;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    padding: 0 2rem;
   }
 
   .bottom-tech {
@@ -722,8 +735,8 @@ textarea.form-control {
 
   .projects-grid {
     grid-template-columns: 1fr;
+    padding: 0 1.5rem;
     gap: 1.5rem;
-    padding: 1.5rem;
   }
 
   .footer-content {

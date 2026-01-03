@@ -307,7 +307,7 @@
           <div class="project-card" data-animate="left">
             <div class="project-image-wrapper">
               <img
-                src="{{ url_for('static', filename='images/workInProgress.webp') }}"
+                src="{{ url_for('static', filename='images/floodWatcher.webp') }}"
                 class="project-image"
                 alt="Flood Watcher"
               />
@@ -331,6 +331,7 @@
               </p>
               <div class="project-tech">
                 <span class="tech-tag">C++</span>
+                <span class="tech-tag">Qt</span>
               </div>
             </div>
           </div>
@@ -338,7 +339,7 @@
           <div class="project-card" data-animate="left">
             <div class="project-image-wrapper">
               <img
-                src="{{ url_for('static', filename='images/formulaPredictor.webp') }}"
+                src="{{ url_for('static', filename='images/formulaAscent.webp') }}"
                 class="project-image"
                 alt="Formula Ascent"
               />
@@ -371,7 +372,7 @@
             </div>
           </div>
 
-          <div class="project-card" data-animate="right">
+          <div class="project-card" data-animate="left">
             <div class="project-image-wrapper">
               <img
                 src="{{ url_for('static', filename='images/trello.webp') }}"
@@ -410,6 +411,37 @@
           <div class="project-card" data-animate="right">
             <div class="project-image-wrapper">
               <img
+                src="{{ url_for('static', filename='images/httpServer.webp') }}"
+                class="project-image"
+                alt="Http Server"
+              />
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <a
+                    href="https://github.com/jakmate/SimpleHTTPServer"
+                    class="btn btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">HTTP/1.1 Server</h3>
+              <p class="project-description">
+                A minimal HTTP/1.1 server mostly built upon <a href="https://www.w3.org/Protocols/HTTP/1.0/spec.html" target="_blank" rel="noopener noreferrer">this spec</a>.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">C</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-animate="right">
+            <div class="project-image-wrapper">
+              <img
                 src="{{ url_for('static', filename='images/algorithmVisualizer.webp') }}"
                 class="project-image"
                 alt="Algorithm Visualizer"
@@ -435,6 +467,34 @@
               <div class="project-tech">
                 <span class="tech-tag">JavaScript</span>
               </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-animate="right">
+            <div class="project-image-wrapper">
+                <img src="{{ url_for('static', filename='images/expenseTracker.webp') }}" 
+                      class="project-image" alt="Expense Tracker">
+                <div class="project-overlay">
+                    <div class="project-actions">
+                        <a href="https://github.com/jakmate/ExpenseTracker" 
+                            class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Expense Tracker</h3>
+                <p class="project-description">
+                    Full-stack application for personal finance management with intuitive UI
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Ruby</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Ruby on Rails</span>
+                    <span class="tech-tag">Tailwind</span>
+                </div>
             </div>
           </div>
         </div>
@@ -556,6 +616,25 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="blockedModal" tabindex="-1" aria-labelledby="blockedModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blockedModalLabel">Access Restricted</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    This project code is restricted to university account access. 
+                    Please contact me via email for a code copy or more details.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="{{ url_for('static', filename='js/accessibility.js') }}"></script>
     <script src="{{ url_for('static', filename='js/vanta.js') }}"></script>

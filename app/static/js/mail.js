@@ -62,6 +62,32 @@ function submitForm(event) {
     });
 }
 
+function validateField(event) {
+  const field = event.target;
+  const value = field.value.trim();
+
+  // Remove existing validation classes
+  field.classList.remove("is-valid", "is-invalid");
+
+  // Validate based on field type
+  let isValid = true;
+
+  if (field.hasAttribute("required") && !value) {
+    isValid = false;
+  } else if (field.type === "email" && value) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    isValid = emailRegex.test(value);
+  }
+
+  // Add validation class
+  field.classList.add(isValid ? "is-valid" : "is-invalid");
+}
+
+function clearValidation(event) {
+  const field = event.target;
+  field.classList.remove("is-valid", "is-invalid");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form");
   const inputs = form.querySelectorAll("input, textarea");
@@ -70,30 +96,4 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("blur", validateField);
     input.addEventListener("input", clearValidation);
   });
-
-  function validateField(event) {
-    const field = event.target;
-    const value = field.value.trim();
-
-    // Remove existing validation classes
-    field.classList.remove("is-valid", "is-invalid");
-
-    // Validate based on field type
-    let isValid = true;
-
-    if (field.hasAttribute("required") && !value) {
-      isValid = false;
-    } else if (field.type === "email" && value) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      isValid = emailRegex.test(value);
-    }
-
-    // Add validation class
-    field.classList.add(isValid ? "is-valid" : "is-invalid");
-  }
-
-  function clearValidation(event) {
-    const field = event.target;
-    field.classList.remove("is-valid", "is-invalid");
-  }
 });

@@ -12,7 +12,7 @@ def home():
 
 
 @app.route("/sendMessage", methods=["POST"])
-def sendMessage():
+def send_message():
     form = Form(request.form)
     if form.validate():
         email = form.email.data
