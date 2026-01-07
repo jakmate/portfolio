@@ -431,7 +431,13 @@
             <div class="project-content">
               <h3 class="project-title">HTTP/1.1 Server</h3>
               <p class="project-description">
-                A minimal HTTP/1.1 server mostly built upon <a href="https://www.w3.org/Protocols/HTTP/1.0/spec.html" target="_blank" rel="noopener noreferrer">this spec</a>.
+                A minimal HTTP/1.1 server mostly built upon
+                <a
+                  href="https://www.w3.org/Protocols/HTTP/1.0/spec.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >this spec</a
+                >.
               </p>
               <div class="project-tech">
                 <span class="tech-tag">C</span>
@@ -472,29 +478,37 @@
 
           <div class="project-card" data-animate="right">
             <div class="project-image-wrapper">
-                <img src="{{ url_for('static', filename='images/expenseTracker.webp') }}" 
-                      class="project-image" alt="Expense Tracker">
-                <div class="project-overlay">
-                    <div class="project-actions">
-                        <a href="https://github.com/jakmate/ExpenseTracker" 
-                            class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                            View Code
-                        </a>
-                    </div>
+              <img
+                src="{{ url_for('static', filename='images/expenseTracker.webp') }}"
+                class="project-image"
+                alt="Expense Tracker"
+              />
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <a
+                    href="https://github.com/jakmate/ExpenseTracker"
+                    class="btn btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Code
+                  </a>
                 </div>
+              </div>
             </div>
             <div class="project-content">
-                <h3 class="project-title">Expense Tracker</h3>
-                <p class="project-description">
-                    Full-stack application for personal finance management with intuitive UI
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Ruby</span>
-                    <span class="tech-tag">TypeScript</span>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Ruby on Rails</span>
-                    <span class="tech-tag">Tailwind</span>
-                </div>
+              <h3 class="project-title">Expense Tracker</h3>
+              <p class="project-description">
+                Full-stack application for personal finance management with
+                intuitive UI
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Ruby</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Ruby on Rails</span>
+                <span class="tech-tag">Tailwind</span>
+              </div>
             </div>
           </div>
         </div>
@@ -618,22 +632,41 @@
     </footer>
 
     <!-- Modal -->
-    <div class="modal fade" id="blockedModal" tabindex="-1" aria-labelledby="blockedModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="blockedModalLabel">Access Restricted</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    This project code is restricted to university account access. 
-                    Please contact me via email for a code copy or more details.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="blockedModal"
+      tabindex="-1"
+      aria-labelledby="blockedModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="blockedModalLabel">
+              Access Restricted
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            This project code is restricted to university account access. Please
+            contact me via email for a code copy or more details.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="{{ url_for('static', filename='js/accessibility.js') }}"></script>

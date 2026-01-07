@@ -683,7 +683,7 @@ textarea.form-control {
 }
 
 /* Responsive Design */
-@media (min-width: 1200px) {
+@media (width >=1200px) {
   .projects-grid {
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     max-width: 1200px;
@@ -696,8 +696,33 @@ textarea.form-control {
     text-align: center;
   }
 
+  .hero-content .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+  }
+
+  .hero-text {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
   .hero-buttons {
     justify-content: center;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .row.align-items-center {
+    flex-direction: column-reverse;
+  }
+
+  .col-lg-6 {
+    width: 100%;
+    max-width: 100% !important;
   }
 
   .tech-stack {
@@ -721,11 +746,11 @@ textarea.form-control {
 @media (width <=768px) {
   .hero-buttons {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
   }
 
   .hero-buttons .btn {
-    width: 100%;
+    width: auto;
     margin-bottom: 0.5rem;
   }
 
