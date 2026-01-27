@@ -25,10 +25,10 @@ jobs:
       - name: Install dependencies
         run: uv sync --only-group dev
 
-      - name: Run linting
+      - name: Run formatting
         run: |
-          uv run --no-sync black --check .
+          uv run --no-sync ruff format --check .
 
       - name: Run linting
         run: |
-          uv run --no-sync flake8 .
+          uv run --no-sync ruff check .
