@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const heroText = document.querySelector(".hero-text");
   if (!heroText) return;
 

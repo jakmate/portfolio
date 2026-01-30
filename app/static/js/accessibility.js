@@ -1,10 +1,10 @@
 // Keyboard navigation accessibility
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", (event) => {
   if (event.key === "Tab") {
     document.body.classList.add("keyboard-navigation");
   }
 });
 
-document.addEventListener("mousedown", function () {
+document.addEventListener("mousedown", () => {
   document.body.classList.remove("keyboard-navigation");
 });

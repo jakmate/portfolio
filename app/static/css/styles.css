@@ -134,16 +134,8 @@ body {
   width: 100%;
   height: 100%;
   background:
-    radial-gradient(
-      circle at 20% 50%,
-      rgb(0 212 255 / 10%) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgb(255 0 128 / 10%) 0%,
-      transparent 50%
-    ),
+    radial-gradient(circle at 20% 50%, rgb(0 212 255 / 10%) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgb(255 0 128 / 10%) 0%, transparent 50%),
     radial-gradient(circle at 40% 80%, rgb(0 212 255 / 5%) 0%, transparent 50%);
   animation: float 6s ease-in-out infinite;
 }
@@ -683,7 +675,7 @@ textarea.form-control {
 }
 
 /* Responsive Design */
-@media (width >=1200px) {
+@media (width >= 1200px) {
   .projects-grid {
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     max-width: 1200px;
@@ -691,7 +683,7 @@ textarea.form-control {
   }
 }
 
-@media (width <=1200px) {
+@media (width <= 1200px) {
   .hero-section {
     text-align: center;
   }
@@ -722,7 +714,7 @@ textarea.form-control {
 
   .col-lg-6 {
     width: 100%;
-    max-width: 100% !important;
+    max-width: 100%;
   }
 
   .tech-stack {
@@ -743,7 +735,7 @@ textarea.form-control {
   }
 }
 
-@media (width <=768px) {
+@media (width <= 768px) {
   .hero-buttons {
     flex-direction: column;
     align-items: center;
@@ -782,7 +774,7 @@ textarea.form-control {
   }
 }
 
-@media (width <=480px) {
+@media (width <= 480px) {
   .hero-name {
     font-size: 2.5rem;
   }

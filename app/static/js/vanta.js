@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   if (typeof VANTA !== "undefined" && document.getElementById("home")) {
     try {
       const vantaEffect = VANTA.NET({

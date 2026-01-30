@@ -1,4 +1,4 @@
-function submitForm(event) {
+function _submitForm(event) {
   event.preventDefault();
 
   const form = document.getElementById("form");
@@ -25,7 +25,7 @@ function submitForm(event) {
       }
       return response.json();
     })
-    .then((data) => {
+    .then((_data) => {
       // Success response
       responseDiv.innerHTML = `
             <div class="success-message">
@@ -88,7 +88,7 @@ function clearValidation(event) {
   field.classList.remove("is-valid", "is-invalid");
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form");
   const inputs = form.querySelectorAll("input, textarea");
 

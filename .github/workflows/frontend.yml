@@ -16,21 +16,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: npm
 
-      - name: Install linters and prettier
+      - name: Install dependencies
         run: |
-          npm install -g htmlhint stylelint eslint stylelint-config-standard prettier
+          npm install -g -D @biomejs/biome
 
-      - name: Lint HTML files
-        run: htmlhint app/templates/*.html
-
-      - name: Lint CSS files
-        run: stylelint "app/static/css/**/*.css"
-
-      - name: Lint JavaScript files
-        run: |
-          eslint "app/static/js/**/*.js"
-
-      - name: Check formatting with Prettier (HTML, CSS, JS)
-        run: |
-          prettier --check .
+      - name: Run biome
+        run: npx @biomejs/biome ci

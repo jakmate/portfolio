@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const navbarToggler = document.querySelector(".navbar-toggler");
   const navbarCollapse = document.querySelector(".navbar-collapse");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar");
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 

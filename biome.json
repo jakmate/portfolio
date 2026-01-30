@@ -1,0 +1,34 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.13/schema.json",
+  "files": {
+    "ignoreUnknown": false,
+    "includes": ["**", "!.venv"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true
+    }
+  },
+  "html": {
+    "parser": {
+      "interpolation": true
+    },
+    "formatter": {
+      "enabled": true
+    }
+  },
+  "javascript": {
+    "globals": ["window", "console", "document"]
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": { "organizeImports": "on" }
+    }
+  }
+}

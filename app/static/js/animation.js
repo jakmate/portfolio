@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Enhanced parallax effect for floating elements
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const floatingElements = document.querySelectorAll(".float-element");
 
   window.addEventListener("scroll", () => {
