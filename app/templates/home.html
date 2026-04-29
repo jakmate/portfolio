@@ -515,7 +515,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button class="btn btn-primary">View Others</button>
+          <button type="button" class="btn btn-primary">View Others</button>
         </a>
       </div>
     </section>
@@ -617,12 +617,14 @@
           <div class="footer-text">
             <p>&copy; 2025 Jakub Orzolek. All rights reserved.</p>
           </div>
-          <div class="position-relative"><a href="#home" class="btt-link">
-            <img
-              src="{{ url_for('static', filename='images/arrow.webp') }}"
-              alt="Back to top"
-            >
-          </a></div>
+          <div class="position-relative">
+            <a href="#home" class="btt-link">
+              <img
+                src="{{ url_for('static', filename='images/arrow.webp') }}"
+                alt="Back to top"
+              >
+            </a>
+          </div>
         </div>
       </div>
     </footer>
