@@ -1,18 +1,26 @@
-from flask import render_template, request, jsonify
-from flask_mail import Message
-from .form import Form
-from app import app, mail
 import threading
+from typing import Literal
+
+from flask import Flask, Response, jsonify, render_template, request
+from flask_mail import Message
+
+from app import app, mail
+
+from .form import Form
 
 
 @app.route("/", methods=["GET", "POST"])
-def home():
+def home() -> str:
     form = Form()
     return render_template("home.html", title="Jakub Orzolek", form=form)
 
 
 @app.route("/sendMessage", methods=["POST"])
-def send_message():
+def send_message() -> (
+    tuple[Response, Literal[200]]
+    | tuple[Response, Literal[500]]
+    | tuple[Response, Literal[400]]
+):
     form = Form(request.form)
     if form.validate():
         email = form.email.data
@@ -28,14 +36,23 @@ def send_message():
             thr = threading.Thread(target=send_async_email, args=[app, msg])
             thr.start()
             return jsonify({"message": "Sent"}), 200
-        except Exception as e:
-            return jsonify({"message": str(e)}), 500
+        except KeyError:
+            app.logger.exception("Missing mail configuration")
+            return jsonify({"message": "Server misconfiguration"}), 500
+
+        except (TypeError, ValueError):
+            app.logger.exception("Invalid email data")
+            return jsonify({"message": "Invalid email data"}), 400
+
+        except RuntimeError:
+            app.logger.exception("Threading error")
+            return jsonify({"message": "Internal server error"}), 500
     return jsonify({"message": "Failed to send"}), 400
 
 
-def send_async_email(app, msg):
+def send_async_email(app: Flask, msg: Message) -> None:
     with app.app_context():
         try:
             mail.send(msg)
-        except Exception as e:
-            app.logger.error(f"Email sending failed: {str(e)}")
+        except Exception:
+            app.logger.exception("Email sending failed")

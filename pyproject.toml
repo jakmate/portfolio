@@ -14,3 +14,7 @@ dependencies = [
 dev = [
     "ruff>=0.14.14",
 ]
+
+[tool.ruff.lint]
+select=["ALL"]
+ignore=["D100", "D101", "D103", "D104"]
