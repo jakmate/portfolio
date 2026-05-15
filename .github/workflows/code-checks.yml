@@ -1,0 +1,48 @@
+name: Code Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4          
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version: "3.12"
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --only-group dev
+
+      - name: Run formatting
+        run: |
+          uv run --no-sync ruff format --check .
+
+      - name: Run linting
+        run: |
+          uv run --no-sync ruff check .
+
+  frontend-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          npm install -g -D @biomejs/biome
+
+      - name: Run biome
+        run: npx @biomejs/biome ci

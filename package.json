@@ -1,4 +1,12 @@
 {
+  "name": "portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "format": "biome format . js,json,css,md,html",
+    "lint": "biome check . --fix js,json,css,md,html"
+  },
   "devDependencies": {
     "@biomejs/biome": "^2.4.15"
   }
