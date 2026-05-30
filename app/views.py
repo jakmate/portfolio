@@ -12,7 +12,7 @@ from .form import Form
 @app.route("/", methods=["GET", "POST"])
 def home() -> str:
     form = Form()
-    return render_template("home.html", title="Jakub Orzolek", form=form)
+    return render_template("home.html", title="JO Portfolio", form=form)
 
 
 @app.route("/sendMessage", methods=["POST"])

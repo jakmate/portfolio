@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (charIndex < originalText.length) {
       currentEl.textContent += originalText.charAt(charIndex);
       charIndex++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 25);
     } else {
       elementIndex++;
       charIndex = 0;
-      setTimeout(typeWriter, 100);
+      setTimeout(typeWriter, 50);
     }
   }
 
