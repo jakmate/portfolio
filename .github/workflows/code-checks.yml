@@ -42,7 +42,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install -g -D @biomejs/biome
+          npm ci
 
       - name: Run biome
-        run: npx @biomejs/biome ci
+        run: npm run ci
