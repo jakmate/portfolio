@@ -13,10 +13,10 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "ruff>=0.15.20",
+    "ruff>=0.16.0",
     "pre-commit>=4.6.1",
 ]
 
 [tool.ruff.lint]
 select=["ALL"]
-ignore=["D100", "D101", "D103", "D104", "D203", "D213"]
+ignore=["D100", "D101", "D103", "D104", "D203", "D213", "COM812", "CPY001"]
