@@ -587,6 +587,30 @@ textarea.form-control {
   font-size: 0.9rem;
 }
 
+.btt-link {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btt-link:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-2px);
+}
+
+.btt-link img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+  transform: rotate(-90deg);
+}
+
 .tech-icons {
   display: flex;
   flex-wrap: wrap;
@@ -629,30 +653,6 @@ textarea.form-control {
 .footer a:hover i {
   color: var(--text-primary);
   transform: scale(1.2);
-}
-
-.btt-link {
-  width: 40px;
-  height: 40px;
-  background: var(--accent-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.btt-link:hover {
-  background: var(--accent-secondary);
-  transform: translateY(-2px);
-}
-
-.btt-link img {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) invert(1);
-  transform: rotate(-90deg);
 }
 
 [data-animate] {
